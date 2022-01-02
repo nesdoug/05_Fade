@@ -8,16 +8,16 @@
 
 #include "LIB/neslib.h"
 #include "LIB/nesdoug.h"
-#include "NES_ST/Girl3.h"
+#include "NES_ST/Girl5.h"
 
 
 
-const unsigned char palette[]={
-0x0f, 0x17, 0x27, 0x36,
-0,0,0,0,
-0,0,0,0,
-0,0,0,0
-}; 
+const unsigned char palette[16]={ 
+0x08,0x16,0x26,0x38,
+0x08,0x0f,0x0f,0x0f,
+0x08,0x0f,0x0f,0x0f,
+0x08,0x0f,0x0f,0x0f 
+};
 
 
 
@@ -33,7 +33,7 @@ void main (void) {
 	vram_adr(NAMETABLE_A);
 	// this sets a start position on the BG, top left of screen
 	
-	vram_unrle(Girl3);
+	vram_unrle(Girl5);
 	// this unpacks a compressed full nametable
 	
 	pal_bright(0);	// can be a value 0 (black) to 8 (white), 4 = normal
